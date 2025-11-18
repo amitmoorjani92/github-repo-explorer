@@ -1,0 +1,268 @@
+/* RepositoryStats.css */
+.repository-stats-container {
+  padding: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.stats-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.metric-selector {
+  min-width: 120px;
+}
+
+.charts-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.chart-card {
+  width: 100%;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease;
+}
+
+.chart-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.chart-content {
+  padding: 16px !important;
+  width: 100%;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+/* Highcharts Tooltip Styles */
+.highcharts-tooltip {
+  filter: none !important;
+}
+
+.custom-tooltip {
+  padding: 12px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 220px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tooltip-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  border-bottom: 2px solid #1976d2;
+  padding-bottom: 6px;
+  color: #1976d2;
+}
+
+.tooltip-section {
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tooltip-label {
+  font-weight: 500;
+  color: #555;
+  font-size: 12px;
+}
+
+.tooltip-value {
+  font-weight: 600;
+  color: #333;
+  font-size: 12px;
+}
+
+.tooltip-metric {
+  padding: 6px 8px;
+  border-radius: 6px;
+  margin: 4px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.tooltip-additions {
+  background: #e8f5e8;
+  border-left: 3px solid #2e7d32;
+}
+
+.tooltip-deletions {
+  background: #ffebee;
+  border-left: 3px solid #c62828;
+}
+
+.metric-label {
+  font-weight: 500;
+}
+
+.additions-label {
+  color: #2e7d32;
+}
+
+.deletions-label {
+  color: #c62828;
+}
+
+.metric-count {
+  font-weight: 600;
+}
+
+.no-data-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+  min-height: 200px;
+}
+
+.no-data-message h6 {
+  margin-bottom: 16px;
+  color: #666;
+}
+
+.no-data-message .MuiTypography-body2 {
+  color: #888;
+  max-width: 300px;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments for no-data messages */
+@media (max-width: 768px) {
+  .no-data-message {
+    padding: 30px 16px;
+    min-height: 150px;
+  }
+
+  .no-data-message h6 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .no-data-message {
+    padding: 20px 12px;
+    min-height: 120px;
+  }
+
+  .no-data-message h6 {
+    font-size: 1rem;
+  }
+
+  .no-data-message .MuiTypography-body2 {
+    font-size: 0.8rem;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .repository-stats-container {
+    padding: 12px;
+  }
+
+  .stats-header {
+    margin-bottom: 16px;
+  }
+
+  .charts-grid {
+    gap: 16px;
+  }
+
+  .chart-content {
+    padding: 12px !important;
+  }
+
+  .custom-tooltip {
+    min-width: 180px;
+    padding: 8px;
+  }
+
+  .tooltip-title {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+
+  .tooltip-section,
+  .tooltip-metric {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .repository-stats-container {
+    padding: 8px;
+  }
+
+  .stats-header {
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+
+  .metric-selector {
+    min-width: 100%;
+  }
+
+  .charts-grid {
+    gap: 12px;
+  }
+
+  .custom-tooltip {
+    min-width: 160px;
+    padding: 6px;
+  }
+
+  .tooltip-title {
+    font-size: 12px;
+  }
+
+  .tooltip-section,
+  .tooltip-metric {
+    font-size: 10px;
+  }
+}
+
+/* Highcharts responsive rules */
+@media (max-width: 768px) {
+  .highcharts-container {
+    width: 100% !important;
+  }
+
+  .highcharts-root {
+    width: 100% !important;
+  }
+}
+
+/* Legend responsive adjustments */
+@media (max-width: 1024px) {
+  .highcharts-legend {
+    font-size: 11px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .highcharts-legend {
+    font-size: 10px !important;
+  }
+
+  .highcharts-legend-item {
+    margin: 4px 0 !important;
+  }
+}

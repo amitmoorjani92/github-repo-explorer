@@ -1,0 +1,292 @@
+/* RepositoryList.css */
+.repository-list-container {
+  padding: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.time-range-filter {
+  margin-bottom: 24px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.page-title {
+  margin: 0 !important;
+}
+
+.repos-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.repo-card {
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0 !important;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.repo-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+  border-color: #1976d2 !important;
+}
+
+.repo-card-content {
+  display: flex;
+  gap: 20px;
+  padding: 16px !important;
+  width: 100%;
+}
+
+.repo-avatar {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+}
+
+.repo-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 16px;
+}
+
+.repo-details {
+  flex: 1;
+  min-width: 0; /* Allow text truncation */
+}
+
+.repo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  gap: 16px;
+}
+
+.repo-title-section {
+  flex: 1;
+  min-width: 0;
+}
+
+.repo-name {
+  font-weight: 600 !important;
+  margin-bottom: 8px !important;
+  word-break: break-word;
+}
+
+.repo-description {
+  color: #666;
+  margin-bottom: 8px !important;
+  line-height: 1.4;
+}
+
+.repo-metrics {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.repo-metric-chip {
+  border-radius: 16px;
+  font-size: 0.75rem;
+}
+
+.repo-last-pushed {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.repo-arrow-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: fit-content;
+  flex-shrink: 0;
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.arrow-icon.rotated {
+  transform: rotate(90deg);
+}
+
+.chart-section {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 0 16px 16px;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.pagination-stack {
+  width: fit-content;
+}
+
+.total-count {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .repo-card-content {
+    gap: 16px;
+  }
+
+  .repo-avatar {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .repository-list-container {
+    padding: 12px;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .repo-card-content {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .repo-avatar {
+    width: 70px;
+    height: 70px;
+    align-self: center;
+  }
+
+  .repo-info {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .repo-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .repo-metrics {
+    justify-content: center;
+  }
+
+  .repo-arrow-button {
+    align-self: center;
+  }
+
+  .time-range-filter {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .repository-list-container {
+    padding: 8px;
+  }
+
+  .repo-card-content {
+    padding: 12px !important;
+    gap: 12px;
+  }
+
+  .repo-avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .repo-name {
+    font-size: 1.1rem !important;
+  }
+
+  .repo-description {
+    font-size: 0.8rem !important;
+  }
+
+  .repo-metrics {
+    gap: 8px;
+  }
+
+  .repo-metric-chip {
+    font-size: 0.7rem;
+  }
+
+  .repo-last-pushed {
+    font-size: 0.8rem;
+  }
+
+  .time-range-filter {
+    gap: 6px;
+  }
+
+  .chart-section {
+    padding: 0 12px 12px;
+  }
+}
+
+/* Highcharts responsive adjustments for embedded charts */
+@media (max-width: 768px) {
+  .highcharts-container {
+    width: 100% !important;
+  }
+
+  .highcharts-root {
+    width: 100% !important;
+  }
+}
+
+/* Smooth transitions */
+.repo-card,
+.repo-card-content,
+.arrow-icon {
+  transition: all 0.3s ease;
+}
+
+/* Focus states for accessibility */
+.repo-card:focus-within {
+  outline: 2px solid #1976d2;
+  outline-offset: 2px;
+}
+
+.repo-metric-chip:focus,
+.repo-arrow-button:focus {
+  outline: 2px solid #1976d2;
+  outline-offset: 1px;
+}
